@@ -24,26 +24,28 @@
         if(!word){ //비어 있는 경우
             word = newWord;
             $word.textContent = word;
-            $input.value = '';
             const order = Number($order.textContent);
             if(order + 1 > number) {
                 $order.textContent = 1;
             } else {
                 $order.textContent = order + 1;
             }
+            $input.value = '';
+            $input.focus();
         } else { //비어 있지 않은 경우
             if(word[word.length-1] === newWord[0]) { //올바른가
                 word = newWord;
                 $word.textContent = word;
-                $input.value = '';
                 const order = Number($order.textContent);
                 if(order + 1 > number) {
                     $order.textContent = 1;
                 } else {
                     $order.textContent = order + 1;
                 }
+                $input.value = '';
+                $input.focus();
             } else { //올바르지 않은가
-
+                alert("WRONG");
             }
         }
     };
