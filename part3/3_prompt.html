@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>끝말잇기</title>
+</head>
+
+<body>
+  <div><span id="order">1</span>번째 참가자</div>
+  <div>제시어: <span id="word"></span></div>
+  <input type="text">
+  <button>입력</button>
+  <button class="btn">버튼2</button>
+  <button class="btn">버튼3</button>
+  <script>
+    const number = parseInt(prompt('몇 명이 참가하나요?'), 10);
+    console.log(typeof number);
+    alert(number);
+    const yesOrNo = confirm('확인이나 취소를 눌러보세요');
+
+    //id
+    document.querySelector('#order');
+
+    //class
+    document.querySelectorAll('button.btn');
+
+    //자손
+    //자식 div>span
+    const $span = document.querySelector('div span');
+    console.log($span);
+  </script>
+</body>
+</html>
