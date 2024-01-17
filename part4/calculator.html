@@ -46,7 +46,7 @@
     const $operator = document.querySelector('#operator');
     const $result = document.querySelector('result');
 
-    const onClickNumber = (number) => {
+    const onClickNumber = (number) => () => { //함수가 함수를 리턴 : 고차함수 high order function
         if(operator){
             numTwo += number;
         } else {
@@ -54,6 +54,7 @@
         }
         $result.value += number;
     };
+
 
     document.querySelector('#num-0').addEventListener('click', onClickNumber('0'));
     document.querySelector('#num-1').addEventListener('click', onClickNumber('1'));
