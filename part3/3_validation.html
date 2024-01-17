@@ -30,12 +30,13 @@
             } else {
                 $order.textContent = order + 1;
             }
-            $input.value = '';
-            $input.focus();
         } else { //비어 있지 않은 경우
             alert("WRONG");
         }
+        $input.value = '';
+        $input.focus();
     };
+    
     const onInput = (event) => {
         newWord = event.target.value;
     };
